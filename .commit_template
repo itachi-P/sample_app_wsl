@@ -11,16 +11,6 @@
 # 🆙  :up: 依存パッケージなどのアップデート
 # 🔒  :lock: 新機能の公開範囲の制限
 # 👮  :cop: セキュリティ関連の改善
-# :art: コードのフォーマットや構造にテコ入れ
-# :pencil2: キュメントを書いた時
-# :construction:  作業中
-# :heavy_plus_sign: 機能を追加,完成
-# :heavy_minus_sign:  機能を削除
-# :speaker: ログを追加
-# :mute:  ログを削除
-# :white_check_mark:  テスト関係
-# :lock:  セキュリティ関係
-# :exclamation: 更新やTag付
 
 # ==== Format ====
 # :emoji: Subject
