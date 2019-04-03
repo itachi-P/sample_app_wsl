@@ -30,6 +30,8 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_template 'users/show'
     assert_not flash.empty?
+    # サインアップ成功後ログイン状態に移行しているか？
+    assert is_logged_in?    # logged_in?メソッドのテスト専用版
   end
 
 end
