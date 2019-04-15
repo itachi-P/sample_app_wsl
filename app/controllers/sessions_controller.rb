@@ -4,12 +4,10 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by(email: params[:session][:email].downcase)
     if @user && @user.authenticate(params[:session][:password])
-      # ユーザーログイン処理後ユーザー情報ページにリダイレクト
-      # flash[:success] = "ログインしたお"
       log_in @user
       # "Remember me"チェックボックスの値に従い永続化Cookieにユーザーを保存または破棄
       params[:session][:remember_me] == '1' ? remember(@user) : forget(@user)
-      redirect_to @user
+      redirect_back_or @user
     else
       # エラーメッセージを手動で作成しflashにセット
       flash.now[:danger] = 'Invalid email/password combination'
